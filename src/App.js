@@ -1,37 +1,42 @@
 import './App.css';
-import TravelCard from './components/TravelCard.jsx';
+import TravelCard from './components/TravelCard.tsx';
 
 function App() {
   const wishlist = [
     {
       id: 1,
-      country: 'United States',
-      city: 'New York',
-      price: 2000,
+      country: 'France',
+      city: 'Nice',
+      flightPrice: 45,
+      hotelPrice: 85,
     },
     {
       id: 2,
-      country: 'France',
-      city: 'Paris',
-      price: 2500,
+      country: 'Switzerland',
+      city: 'Geneva',
+      flightPrice: 80,
+      hotelPrice: 150,
     },
     {
       id: 3,
-      country: 'Japan',
-      city: 'Tokyo',
-      price: 3000,
+      country: 'Spain',
+      city: 'Barcelona',
+      flightPrice: 75,
+      hotelPrice: 110,
     },
     {
       id: 4,
-      country: 'Italy',
-      city: 'Rome',
-      price: 1800,
+      country: 'Montenegro',
+      city: 'Podgorica',
+      flightPrice: 65,
+      hotelPrice: 35,
     },
     {
       id: 5,
-      country: 'Australia',
-      city: 'Sydney',
-      price: 2200,
+      country: 'Italy',
+      city: 'Rome',
+      flightPrice: 90,
+      hotelPrice: 80,
     },
   ];
 
