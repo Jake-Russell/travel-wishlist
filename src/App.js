@@ -1,5 +1,5 @@
 import './App.css';
-import TravelCard from './components/TravelCard.tsx';
+import TravelCard from './components/TravelCard.jsx';
 
 function App() {
   const wishlist = [
