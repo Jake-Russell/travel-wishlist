@@ -1,23 +1,48 @@
-import logo from './logo.svg';
 import './App.css';
+import TravelCard from './components/TravelCard.tsx';
 
 function App() {
+  const wishlist = [
+    {
+      id: 1,
+      country: 'United States',
+      city: 'New York',
+      price: 2000,
+    },
+    {
+      id: 2,
+      country: 'France',
+      city: 'Paris',
+      price: 2500,
+    },
+    {
+      id: 3,
+      country: 'Japan',
+      city: 'Tokyo',
+      price: 3000,
+    },
+    {
+      id: 4,
+      country: 'Italy',
+      city: 'Rome',
+      price: 1800,
+    },
+    {
+      id: 5,
+      country: 'Australia',
+      city: 'Sydney',
+      price: 2200,
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <h1>Travel Wishlist</h1>
+      <div className="travel-cards-container">
+        {wishlist.map((destination, index) => (
+          <TravelCard key={index} data={destination} />
+        ))}
+      </div>
     </div>
   );
 }
