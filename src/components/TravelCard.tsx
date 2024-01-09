@@ -3,13 +3,17 @@ import './TravelCard.scss';
 
 const lookup = require('country-code-lookup');
 
+const handleCardClick = (country: string, city: string) => {
+  alert(`${city}, ${country} clicked.`);
+};
+
 const TravelCard = ({ data }) => {
   const { country, city, flightPrice, hotelPrice } = data;
   const countryCode = lookup.byCountry(country).iso2;
   const countryFlag = getFlagEmoji(countryCode);
 
   return (
-    <div className="travel-card">
+    <div className="travel-card" onClick={() => handleCardClick(country, city)}>
       <div className="flag">{countryFlag}</div>
       <h1>{country}</h1>
       <h2>{city}</h2>
