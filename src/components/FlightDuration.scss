@@ -1,0 +1,22 @@
+.flight-duration {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__airplane-emoji {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__line {
+    width: 40px;
+    height: 2px;
+    border-radius: 8px;
+    background-color: #666;
+  }
+
+  &__text {
+    font-size: 18px;
+    color: #666;
+  }
+}

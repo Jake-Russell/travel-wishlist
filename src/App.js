@@ -9,6 +9,7 @@ function App() {
       city: 'Nice',
       flightPrice: 45,
       hotelPrice: 85,
+      flightDuration: 125,
     },
     {
       id: 2,
@@ -16,6 +17,7 @@ function App() {
       city: 'Geneva',
       flightPrice: 80,
       hotelPrice: 150,
+      flightDuration: 100,
     },
     {
       id: 3,
@@ -23,6 +25,7 @@ function App() {
       city: 'Barcelona',
       flightPrice: 75,
       hotelPrice: 110,
+      flightDuration: 130,
     },
     {
       id: 4,
@@ -30,6 +33,7 @@ function App() {
       city: 'Podgorica',
       flightPrice: 65,
       hotelPrice: 35,
+      flightDuration: 180,
     },
     {
       id: 5,
@@ -37,6 +41,7 @@ function App() {
       city: 'Rome',
       flightPrice: 90,
       hotelPrice: 80,
+      flightDuration: 150,
     },
   ];
 

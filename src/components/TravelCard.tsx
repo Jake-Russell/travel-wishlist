@@ -2,13 +2,14 @@ import React from 'react';
 import './TravelCard.scss';
 
 import lookup from 'country-code-lookup';
+import FlightDuration from './FlightDuration.tsx';
 
 const handleCardClick = (country: string, city: string) => {
   alert(`${city}, ${country} clicked.`);
 };
 
 const TravelCard = ({ data }) => {
-  const { country, city, flightPrice, hotelPrice } = data;
+  const { country, city, flightPrice, hotelPrice, flightDuration } = data;
   const countryCode = lookup.byCountry(country)?.iso2;
   const countryFlag = getFlagEmoji(countryCode);
 
@@ -23,6 +24,7 @@ const TravelCard = ({ data }) => {
       <p className="price">
         Hotel Price: <span>{formatAsCurrency(hotelPrice)}</span> per night
       </p>
+      <FlightDuration durationInMinutes={flightDuration} />
     </div>
   );
 };
@@ -32,6 +34,7 @@ function getFlagEmoji(countryCode) {
     .toUpperCase()
     .split('')
     .map((char) => 127397 + char.charCodeAt());
+  console.log(codePoints);
   return String.fromCodePoint(...codePoints);
 }
 
