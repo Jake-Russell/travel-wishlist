@@ -1,7 +1,7 @@
 import React from 'react';
 import './TravelCard.scss';
 
-const lookup = require('country-code-lookup');
+import lookup from 'country-code-lookup';
 
 const handleCardClick = (country: string, city: string) => {
   alert(`${city}, ${country} clicked.`);
@@ -9,7 +9,7 @@ const handleCardClick = (country: string, city: string) => {
 
 const TravelCard = ({ data }) => {
   const { country, city, flightPrice, hotelPrice } = data;
-  const countryCode = lookup.byCountry(country).iso2;
+  const countryCode = lookup.byCountry(country)?.iso2;
   const countryFlag = getFlagEmoji(countryCode);
 
   return (
