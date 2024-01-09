@@ -1,12 +1,13 @@
 import React from 'react';
-import airplaneSvg from '../assets/airplane.svg';
+import planeArrivalSvg from '../assets/plane-arrival.svg';
+import planeDepartureSvg from '../assets/plane-departure.svg';
 import './FlightDuration.scss';
 
 const FlightDuration = ({ durationInMinutes }) => {
   return (
     <div className="flight-duration">
       <img
-        src={airplaneSvg}
+        src={planeDepartureSvg}
         alt="airplane"
         className="flight-duration__airplane-emoji"
       />
@@ -16,7 +17,7 @@ const FlightDuration = ({ durationInMinutes }) => {
       </h3>
       <div className="flight-duration__line" />
       <img
-        src={airplaneSvg}
+        src={planeArrivalSvg}
         alt="airplane"
         className="flight-duration__airplane-emoji"
       />

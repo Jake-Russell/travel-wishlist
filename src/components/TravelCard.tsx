@@ -15,13 +15,13 @@ const TravelCard = ({ data }) => {
 
   return (
     <div className="travel-card" onClick={() => handleCardClick(country, city)}>
-      <div className="flag">{countryFlag}</div>
-      <h1>{country}</h1>
-      <h2>{city}</h2>
-      <p className="price">
+      <div className="travel-card__flag-emoji">{countryFlag}</div>
+      <h1 className="travel-card__country">{country}</h1>
+      <h2 className="travel-card__city">{city}</h2>
+      <p className="travel-card__price">
         Flight Price: <span>{formatAsCurrency(flightPrice)}</span> return
       </p>
-      <p className="price">
+      <p className="travel-card__price">
         Hotel Price: <span>{formatAsCurrency(hotelPrice)}</span> per night
       </p>
       <FlightDuration durationInMinutes={flightDuration} />
