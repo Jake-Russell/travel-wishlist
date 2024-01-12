@@ -1,5 +1,8 @@
 .custom-button {
+  display: flex;
+  align-items: center;
   padding: 10px 15px;
+  margin: auto;
   border: none;
   border-radius: 8px;
   background-color: #3498db;
@@ -17,4 +20,10 @@
 
 .custom-button:hover {
   background-color: #2980b9;
+}
+
+.icon-container {
+  width: 24px;
+  height: 24px;
+  margin-right: 1rem;
 }

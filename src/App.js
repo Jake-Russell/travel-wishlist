@@ -46,7 +46,7 @@ function App() {
         <div className="emoji-container">{emojiCodePoints.plane}</div>
       </div>
       <div className="button-container">
-        <Button label={"Add new location"} onClick={handleButtonClick} filled />
+        <Button label='Add new location' icon={emojiCodePoints.add} onClick={handleButtonClick} filled />
       </div>
 
       <div className="travel-cards-container">

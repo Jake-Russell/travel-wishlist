@@ -3,6 +3,7 @@ export const emojiCodePoints = {
   plane: "\u2708\uFE0F",
   planeDeparture: "\uD83D\uDEEB",
   planeArrival: "\uD83D\uDEEC",
+  add: "\u2795",
 };
 
 export const getFlagEmoji = (countryCode: string | undefined) => {
