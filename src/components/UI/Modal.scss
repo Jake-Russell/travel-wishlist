@@ -9,6 +9,19 @@
   max-height: 80vh;
 }
 
+.close-modal {
+  justify-content: end;
+  margin: 0;
+
+  .custom-button {
+    padding: 0;
+  }
+
+  .icon-container {
+    height: 20px;
+  }
+}
+
 .modal::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }

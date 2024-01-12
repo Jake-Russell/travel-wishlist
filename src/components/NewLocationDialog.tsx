@@ -1,10 +1,11 @@
 import React from "react";
-import Modal from "./UI/Modal";
+import Modal from "./UI/Modal.jsx";
+import NewLocationForm from "./NewLocationForm.tsx";
 
 const NewLocationDialog = ({ open, onClose }) => {
   return (
     <Modal open={open} onClose={onClose}>
-      <p>New Location Dialog</p>
+      <NewLocationForm />
     </Modal>
   );
 };

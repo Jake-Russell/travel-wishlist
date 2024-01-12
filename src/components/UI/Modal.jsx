@@ -20,8 +20,11 @@ const Modal = ({ children, open, onClose }) => {
 
   return createPortal(
     <dialog ref={dialog} className={`modal`} onClose={onClose}>
+      <div className="button-container close-modal">
+        <Button icon={emojiCodePoints.notAvailable} onClick={onClose} />
+      </div>
+
       {children}
-      <Button icon={emojiCodePoints.notAvailable} onClick={onClose} />
     </dialog>,
     document.getElementById("modal")
   );

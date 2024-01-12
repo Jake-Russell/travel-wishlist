@@ -58,6 +58,7 @@ function App() {
           icon={emojiCodePoints.add}
           onClick={handleButtonClick}
           filled
+          border
         />
       </div>
       <NewLocationDialog

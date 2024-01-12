@@ -1,0 +1,27 @@
+.input {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+
+  &__label {
+    text-transform: uppercase;
+    padding: 0.5rem;
+  }
+
+  &__field {
+    border-width: 2px;
+    border-radius: 0.5rem;
+    border-color: #d1d5db;
+    padding: 0.75rem;
+
+    &--error {
+      border-color: #ef4444;
+    }
+  }
+
+  &__error {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+}

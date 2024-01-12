@@ -2,24 +2,39 @@
   display: flex;
   align-items: center;
   padding: 10px 15px;
-  margin: auto;
   border: none;
-  border-radius: 8px;
   background-color: #3498db;
   color: #fff;
   cursor: pointer;
   font-size: 14px;
   transition: background-color 0.3s ease, transform 0.25s ease-out;
-}
 
-.custom-button.unfilled {
-  background-color: #fff;
-  color: black;
-  border: 1px solid #3498db;
-}
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 
-.custom-button:hover {
-  background-color: #2980b9;
+  &:not(:disabled) {
+    &.unfilled {
+      background-color: #fff;
+      color: black;
+
+      &:hover {
+        transform: scale(1.25);
+      }
+    }
+
+    &.filled {
+      &:hover {
+        background-color: #2980b9;
+      }
+    }
+  }
+
+  &.border {
+    border-radius: 8px;
+    border: 1px solid #3498db;
+  }
 }
 
 .icon-container {
