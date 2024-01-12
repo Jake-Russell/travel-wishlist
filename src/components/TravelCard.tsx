@@ -1,8 +1,11 @@
-import React from 'react';
-import './TravelCard.scss';
+import React from "react";
+import "./TravelCard.scss";
 
-import lookup from 'country-code-lookup';
-import FlightDuration from './FlightDuration.tsx';
+import { getFlagEmoji } from "../utils/emojis.ts";
+import { formatAsCurrency } from "../utils/currency.ts";
+
+import lookup from "country-code-lookup";
+import FlightDuration from "./FlightDuration.tsx";
 
 const handleCardClick = (country: string, city: string) => {
   alert(`${city}, ${country} clicked.`);
@@ -15,7 +18,9 @@ const TravelCard = ({ data }) => {
 
   return (
     <div className="travel-card" onClick={() => handleCardClick(country, city)}>
-      <div className="travel-card__flag-emoji">{countryFlag}</div>
+      <div className="travel-card__flag">
+        <div className="emoji-container">{countryFlag}</div>
+      </div>
       <h1 className="travel-card__country">{country}</h1>
       <h2 className="travel-card__city">{city}</h2>
       <p className="travel-card__price">
@@ -28,20 +33,5 @@ const TravelCard = ({ data }) => {
     </div>
   );
 };
-
-function getFlagEmoji(countryCode) {
-  const codePoints = countryCode
-    .toUpperCase()
-    .split('')
-    .map((char) => 127397 + char.charCodeAt());
-  return String.fromCodePoint(...codePoints);
-}
-
-function formatAsCurrency(number, currencySymbol = 'GBP') {
-  return new Intl.NumberFormat('en-GB', {
-    style: 'currency',
-    currency: currencySymbol,
-  }).format(number);
-}
 
 export default TravelCard;

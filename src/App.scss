@@ -1,0 +1,31 @@
+.app-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.travel-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.emoji-container {
+  width: 48px;
+  height: 48px;
+}
+
+.emoji {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__text {
+    margin: 1rem;
+  }
+}

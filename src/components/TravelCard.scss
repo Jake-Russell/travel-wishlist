@@ -8,12 +8,14 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.25s ease-out;
 
-  &__flag-emoji {
-    font-size: 24px;
-    margin-bottom: 12px;
+  &__flag {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   &__country {
+    margin-top: 0;
     margin-bottom: 8px;
     color: #333;
   }
