@@ -6,7 +6,15 @@ const Button = ({ label, icon, onClick, filled }) => {
 
   return (
     <button className={buttonClassName} onClick={onClick}>
-      {icon && <div className="icon-container">{icon}</div>}
+      {icon && (
+        <div
+          className={`icon-container ${
+            icon && label ? "icon-container__margin" : undefined
+          }`}
+        >
+          {icon}
+        </div>
+      )}
       {label}
     </button>
   );

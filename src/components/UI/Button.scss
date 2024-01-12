@@ -14,7 +14,7 @@
 
 .custom-button.unfilled {
   background-color: #fff;
-  color: #3498db;
+  color: black;
   border: 1px solid #3498db;
 }
 
@@ -25,5 +25,8 @@
 .icon-container {
   width: 24px;
   height: 24px;
-  margin-right: 1rem;
+
+  &__margin {
+    margin-right: 1rem;
+  }
 }

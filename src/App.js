@@ -7,10 +7,13 @@ import { db } from "./firebase.js";
 import twemoji from "twemoji";
 import { emojiCodePoints } from "./utils/emojis.ts";
 import Button from "./components/UI/Button.tsx";
+import NewLocationDialog from "./components/NewLocationDialog.tsx";
 
 function App() {
   const [loading, setLoading] = useState(false);
   const [wishlist, setWishlist] = useState([]);
+  const [showNewLocationModal, setShowNewLocationModal] = useState(false);
+
   const collectionRef = collection(db, "wishlist");
 
   useLayoutEffect(() => {
@@ -36,7 +39,11 @@ function App() {
   }, [collectionRef]);
 
   const handleButtonClick = () => {
-    alert("Button clicked!");
+    setShowNewLocationModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowNewLocationModal(false);
   };
 
   return (
@@ -46,9 +53,17 @@ function App() {
         <div className="emoji-container">{emojiCodePoints.plane}</div>
       </div>
       <div className="button-container">
-        <Button label='Add new location' icon={emojiCodePoints.add} onClick={handleButtonClick} filled />
+        <Button
+          label="Add new location"
+          icon={emojiCodePoints.add}
+          onClick={handleButtonClick}
+          filled
+        />
       </div>
-
+      <NewLocationDialog
+        open={showNewLocationModal}
+        onClose={handleCloseModal}
+      />
       <div className="travel-cards-container">
         {wishlist.map((destination) => (
           <TravelCard key={destination.id} data={destination} />

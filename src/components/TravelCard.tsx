@@ -16,7 +16,6 @@ const TravelCard = ({ data }) => {
   const countryFlag = getFlagEmoji(countryCode);
 
   const handleCardClick = (country: string, city: string) => {
-    // alert(`${city}, ${country} clicked.`);
     setShowModal(true);
   };
 
