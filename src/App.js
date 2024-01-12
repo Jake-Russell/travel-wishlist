@@ -6,51 +6,9 @@ import { db } from "./firebase.js";
 
 import twemoji from "twemoji";
 import { emojiCodePoints } from "./utils/emojis.ts";
+import Button from "./components/UI/Button.tsx";
 
 function App() {
-  // const wishlist = [
-  //   {
-  //     id: 1,
-  //     country: 'France',
-  //     city: 'Nice',
-  //     flightPrice: 45,
-  //     hotelPrice: 85,
-  //     flightDuration: 125,
-  //   },
-  //   {
-  //     id: 2,
-  //     country: 'Switzerland',
-  //     city: 'Geneva',
-  //     flightPrice: 80,
-  //     hotelPrice: 150,
-  //     flightDuration: 100,
-  //   },
-  //   {
-  //     id: 3,
-  //     country: 'Spain',
-  //     city: 'Barcelona',
-  //     flightPrice: 75,
-  //     hotelPrice: 110,
-  //     flightDuration: 130,
-  //   },
-  //   {
-  //     id: 4,
-  //     country: 'Montenegro',
-  //     city: 'Podgorica',
-  //     flightPrice: 65,
-  //     hotelPrice: 35,
-  //     flightDuration: 180,
-  //   },
-  //   {
-  //     id: 5,
-  //     country: 'Italy',
-  //     city: 'Rome',
-  //     flightPrice: 90,
-  //     hotelPrice: 80,
-  //     flightDuration: 150,
-  //   },
-  // ];
-
   const [loading, setLoading] = useState(false);
   const [wishlist, setWishlist] = useState([]);
   const collectionRef = collection(db, "wishlist");
@@ -75,7 +33,11 @@ function App() {
     return () => {
       unsubscribe();
     };
-  }, []);
+  }, [collectionRef]);
+
+  const handleButtonClick = () => {
+    alert("Button clicked!");
+  };
 
   return (
     <div className="app-container" id="emoji-container">
@@ -83,6 +45,10 @@ function App() {
         <h1 className="page-title__text">Travel Wishlist</h1>
         <div className="emoji-container">{emojiCodePoints.plane}</div>
       </div>
+      <div className="button-container">
+        <Button label={"Add new location"} onClick={handleButtonClick} filled />
+      </div>
+
       <div className="travel-cards-container">
         {wishlist.map((destination) => (
           <TravelCard key={destination.id} data={destination} />

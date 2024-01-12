@@ -1,0 +1,20 @@
+.custom-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.25s ease-out;
+}
+
+.custom-button.unfilled {
+  background-color: #fff;
+  color: #3498db;
+  border: 1px solid #3498db;
+}
+
+.custom-button:hover {
+  background-color: #2980b9;
+}
