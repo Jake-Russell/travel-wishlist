@@ -1,0 +1,9 @@
+.new-location-form {
+  &__price-fields {
+    display: flex;
+
+    .input {
+      flex: 1;
+    }
+  }
+}
