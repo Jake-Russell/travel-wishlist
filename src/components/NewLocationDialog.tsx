@@ -5,7 +5,7 @@ import NewLocationForm from "./NewLocationForm.tsx";
 const NewLocationDialog = ({ open, onClose }) => {
   return (
     <Modal open={open} onClose={onClose}>
-      <NewLocationForm />
+      <NewLocationForm close={onClose} />
     </Modal>
   );
 };
